@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Fisher — Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Background effects -->
+    <div class="bg">
+      <div class="bg__glow bg__glow--a"></div>
+      <div class="bg__glow bg__glow--b"></div>
+      <div class="bg__grain"></div>
+
+      <!-- OPTIONAL: transparent gameplay montage video background
+           1) Put your video at: ./assets/bg-montage.mp4
+           2) To disable: comment out this entire <video> block
+      -->
+            <video class="bg__video" autoplay muted loop playsinline>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+            </video>
+
+      <video class="bg__video" autoplay muted loop playsinline>
+        <source src="./assets/bg-montage.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- HERO: only thing visible on initial load -->
+    <header class="hero" id="top">
+      <nav class="nav">
+        <a class="nav__brand" href="#top">NF</a>
+        <div class="nav__links">
+          <a href="#games">Games</a>
+          <a href="#automation">Automation</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <main class="hero__content">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Gameplay + Systems • Unity • C#</p>
+          <h1 class="hero__title">
+            Hi, I’m <span class="accent">Nick Fisher</span>.
+            I build games and automation systems.
+          </h1>
+          <p class="hero__subtitle">
+            I’m transitioning from industrial automation engineering into game development.
+            Here are the projects I’ve shipped, prototyped, and obsessed over.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#games">View Game Projects</a>
+            <a class="btn btn--ghost" href="#automation">See Automation Work</a>
+          </div>
+
+          <div class="hero__meta">
+            <span class="pill">Chicago, IL</span>
+            <span class="pill">Unity • C#</span>
+            <span class="pill">Robotics • PLCs</span>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <!-- Replace with your photo -->
+          <div class="profile">
+            <img
+              src="./assets/profile.jpg"
+              alt="Photo of Nick Fisher"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Optional quick stats -->
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num">+X</div>
+              <div class="stat__label">Games / Prototypes</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">$120K</div>
+              <div class="stat__label">Cost savings delivered</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">Solo</div>
+              <div class="stat__label">Owned full project lifecycle</div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="scrollhint">
+        <span class="scrollhint__text">Scroll for projects</span>
+        <span class="scrollhint__mouse"></span>
+      </div>
+    </header>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">
+            A mix of game development and real-world automation systems.
+          </p>
+        </header>
+
+        <!-- GAME DEV PROJECTS -->
+        <div class="section__block" id="games">
+          <div class="section__blockHeader">
+            <h3>Game Dev Projects</h3>
+            <p>Unity prototypes, gameplay systems, tools, and jams.</p>
+          </div>
+
+          <div class="grid">
+            <!-- CARD -->
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">Unity</div>
+                <div class="tag tag--muted">Gameplay</div>
+              </div>
+
+              <h4 class="card__title">Project Name</h4>
+              <p class="card__desc">
+                1–2 sentence description of what the game is and what you built.
+                Mention a standout system (combat, AI, dialogue, etc.).
+              </p>
+
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Play</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Devlog</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">Game Jam</div>
+                <div class="tag tag--muted">2D</div>
+              </div>
+              <h4 class="card__title">Jam Game</h4>
+              <p class="card__desc">
+                Short description. Call out your contribution (player controller,
+                UI, level scripting, polish, etc.).
+              </p>
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Play</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Itch</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">Tools</div>
+                <div class="tag tag--muted">Editor</div>
+              </div>
+              <h4 class="card__title">Unity Tooling</h4>
+              <p class="card__desc">
+                Example: custom editor tools, content pipeline helpers, or debug UI
+                that sped up iteration.
+              </p>
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- AUTOMATION PROJECTS -->
+        <div class="section__block" id="automation">
+          <div class="section__blockHeader">
+            <h3>Automation Projects</h3>
+            <p>Robotics, PLC systems, sensors, and production improvements.</p>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">Robotics</div>
+                <div class="tag tag--muted">Integration</div>
+              </div>
+              <h4 class="card__title">Automated Cell Upgrade</h4>
+              <p class="card__desc">
+                Briefly explain the problem, what you built, and the impact (cycle time,
+                quality, uptime, cost savings).
+              </p>
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Case Study</a>
+                <a class="link" href="#" target="_blank" rel="noreferrer">Photos</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">PLC</div>
+                <div class="tag tag--muted">Controls</div>
+              </div>
+              <h4 class="card__title">Controls + Sensors System</h4>
+              <p class="card__desc">
+                Example: new safety logic, HMI screens, diagnostics, and a clean
+                commissioning story.
+              </p>
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Write-up</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="tag">Cost Savings</div>
+                <div class="tag tag--muted">Process</div>
+              </div>
+              <h4 class="card__title">Process Improvement</h4>
+              <p class="card__desc">
+                Example: eliminated manual steps, improved repeatability, reduced scrap,
+                or sped up throughput.
+              </p>
+              <div class="card__footer">
+                <a class="link" href="#" target="_blank" rel="noreferrer">Details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section__block" id="contact">
+          <div class="contact">
+            <h3>Contact</h3>
+            <p>If you want to chat about a role or a project, reach out.</p>
+
+            <div class="contact__links">
+              <a class="btn btn--ghost" href="mailto:nick.fisher118@gmail.com">Email</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Itch.io</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> Nick Fisher</p>
+        </footer>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
