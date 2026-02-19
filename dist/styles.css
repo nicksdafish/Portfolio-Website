@@ -857,3 +857,145 @@ img {
     0 0 0 3px rgba(139, 92, 246, 0.35),
     0 0 0 1px rgba(255,255,255,0.18);
 }
+
+/* =====================================
+   Revolving carousels (games + automation)
+===================================== */
+.revolveCarousel {
+  position: relative;
+  margin-top: 10px;
+}
+
+.revolveStage {
+  position: relative;
+  height: clamp(220px, 26vw, 360px);
+  border-radius: 18px;
+  overflow: hidden;
+  outline: none;
+
+  perspective: 1100px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.16);
+  box-shadow: 0 22px 70px rgba(0,0,0,0.35);
+}
+
+.revolveTrack {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.revolveItem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(680px, 86%);
+  transform-style: preserve-3d;
+
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 520ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform, opacity, filter;
+}
+
+/* Your cards already have padding/background/border.
+   This just ensures they "sit" nicely in 3D space. */
+.revolveItem.card {
+  cursor: pointer;
+}
+
+/* Arrows (kept separate so it doesn't conflict with your media carousel arrows) */
+.revolveNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(10, 12, 18, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.92);
+  font-size: 28px;
+  line-height: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 140ms ease, background 140ms ease, opacity 140ms ease;
+}
+
+.revolveNav:hover {
+  background: rgba(255, 255, 255, 0.09);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.revolveNav:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.revolveNav--left { left: -6px; }
+.revolveNav--right { right: -6px; }
+
+.revolveStage:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.35),
+    0 0 0 1px rgba(255,255,255,0.18),
+    0 22px 70px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 720px) {
+  .revolveItem { width: 92%; }
+  .revolveNav--left { left: 8px; }
+  .revolveNav--right { right: 8px; }
+}
+
+/* =====================================
+   Revolving carousel focus states
+===================================== */
+
+/* Remember: your cards already have transparency.
+   These classes will override ONLY inside the carousel. */
+
+.revolveItem {
+  opacity: 0.55;
+  filter: brightness(0.75);
+
+  transition:
+    transform 520ms cubic-bezier(0.22,1,0.36,1),
+    opacity 520ms cubic-bezier(0.22,1,0.36,1),
+    filter 520ms cubic-bezier(0.22,1,0.36,1),
+    background 520ms cubic-bezier(0.22,1,0.36,1),
+    border-color 520ms cubic-bezier(0.22,1,0.36,1),
+    box-shadow 520ms cubic-bezier(0.22,1,0.36,1);
+
+  will-change: transform, opacity, filter, background;
+}
+
+/* ACTIVE (CENTER) ITEM */
+.revolveItem.is-active {
+  opacity: 1;
+  filter: none;
+
+  background: rgba(18, 20, 28, 0.96);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.65),
+    0 0 0 1px rgba(255,255,255,0.06);
+
+  /* active should respond immediately */
+  transition-delay: 0ms;
+}
+
+.revolveItem:not(.is-active) {
+  transition-delay:
+    0ms,     /* transform */
+    140ms,   /* opacity */
+    140ms,   /* filter */
+    140ms,   /* background */
+    140ms,   /* border-color */
+    140ms;   /* box-shadow */
+}

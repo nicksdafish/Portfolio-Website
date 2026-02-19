@@ -120,4 +120,80 @@ document.querySelectorAll(".card[data-href]").forEach((card) => {
   });
 })();
 
+// ===============================
+// Revolving carousels (games + automation)
+// Looks for: [data-revolve-carousel]
+// ===============================
+(() => {
+  const carousels = document.querySelectorAll("[data-revolve-carousel]");
+
+  carousels.forEach((root) => {
+    const stage = root.querySelector(".revolveStage");
+    stage.classList.add("is-active");
+    const items = Array.from(root.querySelectorAll(".revolveItem"));
+    const prev = root.querySelector("[data-prev]");
+    const next = root.querySelector("[data-next]");
+
+    if (!stage || !items.length || !prev || !next) return;
+
+    let index = 0;
+
+    // Tunables (feel free to tweak)
+    const X = 240;      // horizontal spacing between items
+    const Z = 170;      // depth pushback for side items
+    const ROT = 20;     // rotateY degrees
+    const SCALE_SIDE = 0.88;
+
+    function render() {
+      items.forEach((el, i) => {
+        el.classList.remove("is-active");
+        // shortest wrap-around offset so it "revolves" nicely
+        let offset = i - index;
+        const half = Math.floor(items.length / 2);
+
+        if (offset > half) offset -= items.length;
+        if (offset < -half) offset += items.length;
+
+        const abs = Math.abs(offset);
+        if (offset === 0) {
+          el.classList.add("is-active");
+        }
+
+        const visible = abs <= 2; // show center + 2 neighbors each side
+
+        const tx = offset * X;
+        const tz = -abs * Z;
+        const ry = offset * -ROT;
+        const sc = offset === 0 ? 1 : SCALE_SIDE;
+
+        el.style.opacity = visible ? (offset === 0 ? "1" : "0.55") : "0";
+        el.style.filter = visible ? (offset === 0 ? "none" : "brightness(0.75)") : "brightness(0.65)";
+        el.style.pointerEvents = offset === 0 ? "auto" : "none";
+
+        el.style.transform =
+          `translate(-50%, -50%) translate3d(${tx}px,0,${tz}px) rotateY(${ry}deg) scale(${sc})`;
+      });
+    }
+
+    function go(dir) {
+      index = (index + dir + items.length) % items.length;
+      render();
+    }
+
+    prev.addEventListener("click", () => go(-1));
+    next.addEventListener("click", () => go(1));
+
+    // keyboard: focus stage then use arrows
+    stage.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") go(-1);
+      if (e.key === "ArrowRight") go(1);
+    });
+
+    // click center card using your existing card handler (data-href)
+    // NOTE: your existing clickable-card JS will still work.
+
+    render();
+  });
+})();
+
 

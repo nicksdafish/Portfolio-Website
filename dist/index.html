@@ -98,108 +98,104 @@
   </header>
 
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="container">
-      <header class="section__header">
-        <h2 class="section__title">Projects</h2>
-        <p class="section__subtitle">
-          A mix of game development and real-world automation systems.
-        </p>
-      </header>
+ <!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__subtitle">
+        A mix of game development and real-world automation systems.
+      </p>
+    </header>
 
-      <div class="section__block">
+    <!-- GAME DEV PROJECTS (REVOLVING CAROUSEL) -->
+    <div class="section__block" id="games">
+      <div class="section__blockHeader">
+        <h3>Game Dev Projects</h3>
+        <p>Unity prototypes, gameplay systems, tools, and jams.</p>
+      </div>
 
-        <!-- GAME DEV PROJECTS -->
-        <div class="section__block" id="games">
-          <div class="section__blockHeader">
-            <h3>Game Dev Projects</h3>
-            <p>Unity prototypes, gameplay systems, tools, and jams.</p>
-          </div>
+      <div class="revolveCarousel" data-revolve-carousel>
+        <button class="revolveNav revolveNav--left" type="button" data-prev aria-label="Previous game project">‹</button>
 
-          <div class="grid">
-            <article class="card card--clickable card--tilt" role="link" tabindex="0" data-href="games.html#project-name"
-              aria-label="Project Name — view details">
+        <div class="revolveStage" tabindex="0" aria-label="Game projects carousel">
+          <div class="revolveTrack" data-track>
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="games.html#project-name" aria-label="Project Name — view details">
               <div class="card__top">
                 <div class="tag">Unity</div>
                 <div class="tag tag--muted">Gameplay</div>
               </div>
-
               <h4 class="card__title">Project Name</h4>
               <p class="card__desc">
                 1–2 sentence description of what the game is and what you built.
                 Mention a standout system (combat, AI, dialogue, etc.).
               </p>
-
-              <div class="card__footer"></div>
             </article>
 
-            <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#jam-game"
-              aria-label="Jam Game — view details">
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="games.html#jam-game" aria-label="Jam Game — view details">
               <div class="card__top">
                 <div class="tag">Game Jam</div>
                 <div class="tag tag--muted">2D</div>
               </div>
-
               <h4 class="card__title">Jam Game</h4>
               <p class="card__desc">
                 Short description. Call out your contribution (player controller,
                 UI, level scripting, polish, etc.).
               </p>
-
-              <div class="card__footer"></div>
             </article>
 
-            <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#unity-tooling"
-              aria-label="Unity Tooling — view details">
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="games.html#unity-tooling" aria-label="Unity Tooling — view details">
               <div class="card__top">
                 <div class="tag">Tools</div>
                 <div class="tag tag--muted">Editor</div>
               </div>
-
               <h4 class="card__title">Unity Tooling</h4>
               <p class="card__desc">
                 Example: custom editor tools, content pipeline helpers, or debug UI
                 that sped up iteration.
               </p>
-
-              <div class="card__footer"></div>
             </article>
           </div>
         </div>
 
+        <button class="revolveNav revolveNav--right" type="button" data-next aria-label="Next game project">›</button>
+      </div>
+    </div>
 
-        <!-- AUTOMATION PROJECTS -->
-        <div class="section__block" id="automation">
-          <div class="section__blockHeader">
-            <h3>Automation Projects</h3>
-            <p>Robotics, PLC systems, sensors, and production improvements.</p>
-          </div>
-          <div class="grid">
-            <article class="card card--clickable" role="link" tabindex="0" data-href="automation.html#laser-cell"
-              aria-label="Automated Cell Upgrade — view details">
+    <!-- AUTOMATION PROJECTS (REVOLVING CAROUSEL) -->
+    <div class="section__block" id="automation">
+      <div class="section__blockHeader">
+        <h3>Automation Projects</h3>
+        <p>Robotics, PLC systems, sensors, and production improvements.</p>
+      </div>
+
+      <div class="revolveCarousel" data-revolve-carousel>
+        <button class="revolveNav revolveNav--left" type="button" data-prev aria-label="Previous automation project">‹</button>
+
+        <div class="revolveStage" tabindex="0" aria-label="Automation projects carousel">
+          <div class="revolveTrack" data-track>
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="automation.html#laser-cell" aria-label="Automated Cell Upgrade — view details">
               <div class="card__top">
                 <div class="tag">Robotics</div>
                 <div class="tag tag--muted">Integration</div>
               </div>
-
               <h4 class="card__title">Automated Cell Upgrade</h4>
               <p class="card__desc">
                 Briefly explain the problem, what you built, and the impact (cycle time,
                 quality, uptime, cost savings).
               </p>
-
-              <div class="card__footer">
-              </div>
             </article>
 
-            <article class="card card--clickable" role="link" tabindex="0" data-href="automation.html#sensor-upgrade"
-              aria-label="Controls + Sensors System — view details">
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="automation.html#sensor-upgrade" aria-label="Controls + Sensors System — view details">
               <div class="card__top">
                 <div class="tag">PLC</div>
                 <div class="tag tag--muted">Controls</div>
               </div>
-
               <h4 class="card__title">Controls + Sensors System</h4>
               <p class="card__desc">
                 Example: new safety logic, HMI screens, diagnostics, and a clean
@@ -207,13 +203,12 @@
               </p>
             </article>
 
-            <article class="card card--clickable" role="link" tabindex="0" data-href="automation.html#plc-overhaul"
-              aria-label="Process Improvement — view details">
+            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+              data-href="automation.html#plc-overhaul" aria-label="Process Improvement — view details">
               <div class="card__top">
                 <div class="tag">Cost Savings</div>
                 <div class="tag tag--muted">Process</div>
               </div>
-
               <h4 class="card__title">Process Improvement</h4>
               <p class="card__desc">
                 Example: eliminated manual steps, improved repeatability, reduced scrap,
@@ -222,7 +217,13 @@
             </article>
           </div>
         </div>
+
+        <button class="revolveNav revolveNav--right" type="button" data-next aria-label="Next automation project">›</button>
       </div>
+    </div>
+
+  </div>
+</section>
 
 
       <!-- CONTACT -->
