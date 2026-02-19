@@ -661,8 +661,12 @@ img {
 
 .mediaRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+}
+
+.mediaRow > :only-child {
+  grid-column: 1 / -1;
 }
 
 .mediaBox {
@@ -766,4 +770,90 @@ img {
   box-shadow:
     calc(var(--sx, 0px)) calc(var(--sy, 18px))
     40px rgba(0,0,0,0.35);
+}
+
+/* =====================================
+   Media Carousel
+===================================== */
+.mediaCarousel {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  min-height: 160px;
+}
+
+.mediaViewport {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.mediaTrack {
+  display: flex;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.mediaSlide {
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+}
+
+.mediaSlide img,
+.mediaSlide video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Nav arrows */
+.mediaNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 12, 18, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 26px;
+  line-height: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease, opacity 140ms ease;
+  z-index: 2;
+}
+
+.mediaNav:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.mediaNav:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.mediaNav--left { left: 10px; }
+.mediaNav--right { right: 10px; }
+
+.mediaNav[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Keyboard focus */
+.mediaViewport:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.35),
+    0 0 0 1px rgba(255,255,255,0.18);
 }

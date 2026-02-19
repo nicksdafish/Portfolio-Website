@@ -71,3 +71,53 @@ document.querySelectorAll(".card[data-href]").forEach((card) => {
   });
 })();
 
+
+// ===============================
+// Media Carousel (arrows + keyboard)
+// ===============================
+(() => {
+  const carousels = document.querySelectorAll("[data-carousel]");
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector("[data-track]");
+    const prevBtn = carousel.querySelector("[data-prev]");
+    const nextBtn = carousel.querySelector("[data-next]");
+    const viewport = carousel.querySelector(".mediaViewport");
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    const update = () => {
+      track.style.transform = `translateX(${-index * 100}%)`;
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === slides.length - 1;
+    };
+
+    prevBtn.addEventListener("click", () => {
+      index = Math.max(0, index - 1);
+      update();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      index = Math.min(slides.length - 1, index + 1);
+      update();
+    });
+
+    // Keyboard support when viewport is focused
+    viewport?.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        index = Math.max(0, index - 1);
+        update();
+      } else if (e.key === "ArrowRight") {
+        index = Math.min(slides.length - 1, index + 1);
+        update();
+      }
+    });
+
+    update();
+  });
+})();
+
+

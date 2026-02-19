@@ -1,186 +1,220 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nick Fisher — Automation Projects</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
 
-  <body>
-    <div class="bg">
-      <div class="bg__glow bg__glow--a"></div>
-      <div class="bg__glow bg__glow--b"></div>
-      <div class="bg__grain"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nick Fisher — Automation Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__grain"></div>
+  </div>
+
+  <header class="pageHero">
+    <nav class="nav">
+      <a class="nav__brand" href="index.html">NF</a>
+      <div class="nav__links">
+        <a href="games.html">Games</a>
+        <a class="is-active" href="index.html#automation">Automation</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="container pageHero__content">
+      <h1 class="pageHero__title">Automation Projects</h1>
+      <p class="pageHero__subtitle">
+        Click a project to jump to full details.
+      </p>
     </div>
+  </header>
 
-    <header class="pageHero">
-      <nav class="nav">
-        <a class="nav__brand" href="index.html">NF</a>
-        <div class="nav__links">
-          <a href="games.html">Games</a>
-          <a class="is-active" href="index.html#automation">Automation</a>
-          <a href="contact.html">Contact</a>
+  <main class="section">
+    <div class="container">
+      <!-- Jump Table / TOC -->
+      <div class="section__block">
+        <h3 style="margin:0 0 10px;">Projects</h3>
+        <div class="jump">
+          <a class="jump__item" href="#laser-cell">Laser Cell Upgrade</a>
+          <a class="jump__item" href="#sensor-upgrade">Sensor + Vision Upgrade</a>
+          <a class="jump__item" href="#plc-overhaul">PLC / HMI Overhaul</a>
         </div>
-      </nav>
-
-      <div class="container pageHero__content">
-        <h1 class="pageHero__title">Automation Projects</h1>
-        <p class="pageHero__subtitle">
-          Click a project to jump to full details.
-        </p>
       </div>
-    </header>
 
-    <main class="section">
-      <div class="container">
-        <!-- Jump Table / TOC -->
-        <div class="section__block">
-          <h3 style="margin:0 0 10px;">Projects</h3>
-          <div class="jump">
-            <a class="jump__item" href="#laser-cell">Laser Cell Upgrade</a>
-            <a class="jump__item" href="#sensor-upgrade">Sensor + Vision Upgrade</a>
-            <a class="jump__item" href="#plc-overhaul">PLC / HMI Overhaul</a>
+      <!-- PROJECT 1 -->
+      <section class="detail" id="laser-cell">
+        <div class="detail__head">
+          <h2 class="detail__title">Laser Cell Upgrade</h2>
+          <div class="detail__tags">
+            <span class="tag">Robotics</span>
+            <span class="tag tag--muted">Integration</span>
+            <span class="tag tag--muted">Cost Savings</span>
           </div>
         </div>
 
-        <!-- PROJECT 1 -->
-        <section class="detail" id="laser-cell">
-          <div class="detail__head">
-            <h2 class="detail__title">Laser Cell Upgrade</h2>
-            <div class="detail__tags">
-              <span class="tag">Robotics</span>
-              <span class="tag tag--muted">Integration</span>
-              <span class="tag tag--muted">Cost Savings</span>
-            </div>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>What it is</h4>
+            <p>
+              Short summary of the cell and what it does. One paragraph.
+            </p>
+
+            <h4>My role</h4>
+            <ul>
+              <li>Owned requirements → design → build → commissioning</li>
+              <li>Robot + sensors + PLC + safety integration</li>
+              <li>Vendor management + troubleshooting</li>
+            </ul>
+
+            <h4>Impact</h4>
+            <ul>
+              <li>Cycle time: 55s → 40s (example)</li>
+              <li>Reduced downtime / improved repeatability</li>
+              <li>$XX,XXX annual savings</li>
+            </ul>
           </div>
 
-          <div class="detail__grid">
-            <div class="detail__panel">
-              <h4>What it is</h4>
-              <p>
-                Short summary of the cell and what it does. One paragraph.
-              </p>
+          <div class="detail__panel">
+            <h4>Tech / Components</h4>
+            <ul>
+              <li>Robot: (FANUC / UR / etc.)</li>
+              <li>PLC: (Keyence / Allen-Bradley)</li>
+              <li>Sensors: (Keyence LR-TB, etc.)</li>
+              <li>Safety: relays, E-stops, interlocks</li>
+            </ul>
 
-              <h4>My role</h4>
-              <ul>
-                <li>Owned requirements → design → build → commissioning</li>
-                <li>Robot + sensors + PLC + safety integration</li>
-                <li>Vendor management + troubleshooting</li>
-              </ul>
+            <h4>Media</h4>
+            <div class="mediaRow">
+              <!-- Carousel A -->
+              <div class="mediaCarousel" data-carousel>
+                <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">
+                  ‹
+                </button>
 
-              <h4>Impact</h4>
-              <ul>
-                <li>Cycle time: 55s → 40s (example)</li>
-                <li>Reduced downtime / improved repeatability</li>
-                <li>$XX,XXX annual savings</li>
-              </ul>
-            </div>
+                <div class="mediaViewport" tabindex="0" aria-label="Media carousel">
+                  <div class="mediaTrack" data-track>
+                    <!-- Slide 1 (image) -->
+                    <div class="mediaSlide">
+                      <img src="./assets/placeholder-1.jpg" alt="Project photo 1" />
+                    </div>
 
-            <div class="detail__panel">
-              <h4>Tech / Components</h4>
-              <ul>
-                <li>Robot: (FANUC / UR / etc.)</li>
-                <li>PLC: (Keyence / Allen-Bradley)</li>
-                <li>Sensors: (Keyence LR-TB, etc.)</li>
-                <li>Safety: relays, E-stops, interlocks</li>
-              </ul>
+                    <!-- Slide 2 (image) -->
+                    <div class="mediaSlide">
+                      <img src="./assets/placeholder-2.jpg" alt="Project photo 2" />
+                    </div>
 
-              <h4>Media</h4>
-              <div class="mediaRow">
-                <div class="mediaBox">Add photo/video later</div>
-                <div class="mediaBox">Add diagram later</div>
-              </div>
+                    <!-- Slide 3 (video) -->
+                    <div class="mediaSlide">
+                      <video muted loop playsinline controls>
+                        <source src="./assets/demo-clip.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
 
-              <div class="detail__actions">
-                <a class="btn btn--ghost" href="#top">Back to top</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- PROJECT 2 -->
-        <section class="detail" id="sensor-upgrade">
-          <div class="detail__head">
-            <h2 class="detail__title">Sensor + Vision Upgrade</h2>
-            <div class="detail__tags">
-              <span class="tag">Sensors</span>
-              <span class="tag tag--muted">Controls</span>
-            </div>
-          </div>
-
-          <div class="detail__grid">
-            <div class="detail__panel">
-              <h4>Problem</h4>
-              <p>What was failing / slow / inconsistent?</p>
-
-              <h4>Solution</h4>
-              <p>What you added or changed, and why.</p>
-
-              <h4>Result</h4>
-              <ul>
-                <li>Scrap reduced by X%</li>
-                <li>Uptime improved</li>
-              </ul>
-            </div>
-
-            <div class="detail__panel">
-              <h4>Implementation notes</h4>
-              <ul>
-                <li>Wiring + I/O mapping</li>
-                <li>Calibration / alignment</li>
-                <li>Diagnostics in HMI</li>
-              </ul>
-
-              <div class="detail__actions">
-                <a class="btn btn--ghost" href="#top">Back to top</a>
+                <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">
+                  ›
+                </button>
               </div>
             </div>
-          </div>
-        </section>
 
-        <!-- PROJECT 3 -->
-        <section class="detail" id="plc-overhaul">
-          <div class="detail__head">
-            <h2 class="detail__title">PLC / HMI Overhaul</h2>
-            <div class="detail__tags">
-              <span class="tag">PLC</span>
-              <span class="tag tag--muted">HMI</span>
-              <span class="tag tag--muted">Safety</span>
+
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#top">Back to top</a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="detail__grid">
-            <div class="detail__panel">
-              <h4>Before</h4>
-              <p>Old logic issues, lack of diagnostics, etc.</p>
+      <!-- PROJECT 2 -->
+      <section class="detail" id="sensor-upgrade">
+        <div class="detail__head">
+          <h2 class="detail__title">Sensor + Vision Upgrade</h2>
+          <div class="detail__tags">
+            <span class="tag">Sensors</span>
+            <span class="tag tag--muted">Controls</span>
+          </div>
+        </div>
 
-              <h4>After</h4>
-              <p>New structure, alarms, state machine, better recoverability.</p>
-            </div>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Problem</h4>
+            <p>What was failing / slow / inconsistent?</p>
 
-            <div class="detail__panel">
-              <h4>Highlights</h4>
-              <ul>
-                <li>State-machine style sequencing</li>
-                <li>Alarm history / fault isolation</li>
-                <li>Safer recovery routines</li>
-              </ul>
-              <div class="detail__actions">
-                <a class="btn btn--ghost" href="#top">Back to top</a>
-              </div>
+            <h4>Solution</h4>
+            <p>What you added or changed, and why.</p>
+
+            <h4>Result</h4>
+            <ul>
+              <li>Scrap reduced by X%</li>
+              <li>Uptime improved</li>
+            </ul>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Implementation notes</h4>
+            <ul>
+              <li>Wiring + I/O mapping</li>
+              <li>Calibration / alignment</li>
+              <li>Diagnostics in HMI</li>
+            </ul>
+
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#top">Back to top</a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <footer class="footer">
-          <p>© <span id="year"></span> Nick Fisher</p>
-        </footer>
-      </div>
-    </main>
+      <!-- PROJECT 3 -->
+      <section class="detail" id="plc-overhaul">
+        <div class="detail__head">
+          <h2 class="detail__title">PLC / HMI Overhaul</h2>
+          <div class="detail__tags">
+            <span class="tag">PLC</span>
+            <span class="tag tag--muted">HMI</span>
+            <span class="tag tag--muted">Safety</span>
+          </div>
+        </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Before</h4>
+            <p>Old logic issues, lack of diagnostics, etc.</p>
+
+            <h4>After</h4>
+            <p>New structure, alarms, state machine, better recoverability.</p>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Highlights</h4>
+            <ul>
+              <li>State-machine style sequencing</li>
+              <li>Alarm history / fault isolation</li>
+              <li>Safer recovery routines</li>
+            </ul>
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Nick Fisher</p>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
 </html>
