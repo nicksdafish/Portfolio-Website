@@ -32,26 +32,42 @@ document.querySelectorAll(".card[data-href]").forEach((card) => {
 });
 
 
+
 // ===============================
-// Static blur trigger at Projects section
+// Subtle 3D tilt + dynamic shadow
 // ===============================
-(function () {
-  const video = document.getElementById("bgVideo");
-  const triggerSection = document.getElementById("projects");
+(() => {
+  const MAX_TILT_DEG = 30;
+  const SHADOW_MOVE = 14; // how far shadow moves
 
-  if (!video || !triggerSection) return;
+  const cards = document.querySelectorAll(".card--tilt");
 
-  function updateVideoState() {
-    // Position of the Projects section relative to viewport
-    const rect = triggerSection.getBoundingClientRect();
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
 
-    // When top of Projects crosses top of viewport
-    const crossed = rect.top <= 0;
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-    video.classList.toggle("is-blurred", crossed);
-  }
+      const rx = (-y * MAX_TILT_DEG).toFixed(2);
+      const ry = (x * MAX_TILT_DEG).toFixed(2);
 
-  // Run once + on scroll
-  updateVideoState();
-  window.addEventListener("scroll", updateVideoState, { passive: true });
+      // Shadow moves opposite tilt
+      const sx = (-x * SHADOW_MOVE).toFixed(2);
+      const sy = (y * SHADOW_MOVE + 18).toFixed(2);
+
+      card.style.setProperty("--rx", `${rx}deg`);
+      card.style.setProperty("--ry", `${ry}deg`);
+      card.style.setProperty("--sx", `${sx}px`);
+      card.style.setProperty("--sy", `${sy}px`);
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.setProperty("--rx", `0deg`);
+      card.style.setProperty("--ry", `0deg`);
+      card.style.setProperty("--sx", `0px`);
+      card.style.setProperty("--sy", `18px`);
+    });
+  });
 })();
+

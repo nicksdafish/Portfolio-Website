@@ -19,9 +19,9 @@
            1) Put your video at: ./assets/bg-montage.mp4
            2) To disable: comment out this entire <video> block
       -->
-    
-    
-      <video id="bgVideo" class="bg__video" autoplay muted loop playsinline>
+
+
+    <video id="bgVideo" class="bg__video" autoplay muted loop playsinline>
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
     </video>
 
@@ -69,7 +69,7 @@
       <div class="hero__media">
         <!-- Replace with your photo -->
         <div class="profile">
-          <img src="./assets/profile.jpg" alt="Photo of Nick Fisher" loading="eager" />
+          <img src="../assets/profile.jpeg" alt="Photo of Nick Fisher" loading="eager" />
         </div>
 
         <!-- Optional quick stats -->
@@ -107,61 +107,64 @@
         </p>
       </header>
 
-      <!-- GAME DEV PROJECTS -->
-      <div class="section__block" id="games">
-        <div class="section__blockHeader">
-          <h3>Game Dev Projects</h3>
-          <p>Unity prototypes, gameplay systems, tools, and jams.</p>
-        </div>
+      <div class="section__block">
 
-        <div class="grid">
-          <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#project-name"
-            aria-label="Project Name — view details">
-            <div class="card__top">
-              <div class="tag">Unity</div>
-              <div class="tag tag--muted">Gameplay</div>
-            </div>
+        <!-- GAME DEV PROJECTS -->
+        <div class="section__block" id="games">
+          <div class="section__blockHeader">
+            <h3>Game Dev Projects</h3>
+            <p>Unity prototypes, gameplay systems, tools, and jams.</p>
+          </div>
 
-            <h4 class="card__title">Project Name</h4>
-            <p class="card__desc">
-              1–2 sentence description of what the game is and what you built.
-              Mention a standout system (combat, AI, dialogue, etc.).
-            </p>
+          <div class="grid">
+            <article class="card card--clickable card--tilt" role="link" tabindex="0" data-href="games.html#project-name"
+              aria-label="Project Name — view details">
+              <div class="card__top">
+                <div class="tag">Unity</div>
+                <div class="tag tag--muted">Gameplay</div>
+              </div>
 
-            <div class="card__footer"></div>
-          </article>
+              <h4 class="card__title">Project Name</h4>
+              <p class="card__desc">
+                1–2 sentence description of what the game is and what you built.
+                Mention a standout system (combat, AI, dialogue, etc.).
+              </p>
 
-          <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#jam-game"
-            aria-label="Jam Game — view details">
-            <div class="card__top">
-              <div class="tag">Game Jam</div>
-              <div class="tag tag--muted">2D</div>
-            </div>
+              <div class="card__footer"></div>
+            </article>
 
-            <h4 class="card__title">Jam Game</h4>
-            <p class="card__desc">
-              Short description. Call out your contribution (player controller,
-              UI, level scripting, polish, etc.).
-            </p>
+            <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#jam-game"
+              aria-label="Jam Game — view details">
+              <div class="card__top">
+                <div class="tag">Game Jam</div>
+                <div class="tag tag--muted">2D</div>
+              </div>
 
-            <div class="card__footer"></div>
-          </article>
+              <h4 class="card__title">Jam Game</h4>
+              <p class="card__desc">
+                Short description. Call out your contribution (player controller,
+                UI, level scripting, polish, etc.).
+              </p>
 
-          <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#unity-tooling"
-            aria-label="Unity Tooling — view details">
-            <div class="card__top">
-              <div class="tag">Tools</div>
-              <div class="tag tag--muted">Editor</div>
-            </div>
+              <div class="card__footer"></div>
+            </article>
 
-            <h4 class="card__title">Unity Tooling</h4>
-            <p class="card__desc">
-              Example: custom editor tools, content pipeline helpers, or debug UI
-              that sped up iteration.
-            </p>
+            <article class="card card--clickable" role="link" tabindex="0" data-href="games.html#unity-tooling"
+              aria-label="Unity Tooling — view details">
+              <div class="card__top">
+                <div class="tag">Tools</div>
+                <div class="tag tag--muted">Editor</div>
+              </div>
 
-            <div class="card__footer"></div>
-          </article>
+              <h4 class="card__title">Unity Tooling</h4>
+              <p class="card__desc">
+                Example: custom editor tools, content pipeline helpers, or debug UI
+                that sped up iteration.
+              </p>
+
+              <div class="card__footer"></div>
+            </article>
+          </div>
         </div>
 
 
@@ -219,6 +222,7 @@
           </div>
         </div>
       </div>
+
 
       <!-- CONTACT -->
       <div class="section__block" id="contact">
