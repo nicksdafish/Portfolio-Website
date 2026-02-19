@@ -1,171 +1,249 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nick Fisher — Game Projects</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+
 </head>
 
 <body>
 
-<!-- Background -->
-<div class="bg">
-  <div class="bg__glow bg__glow--a"></div>
-  <div class="bg__glow bg__glow--b"></div>
-  <div class="bg__grain"></div>
-</div>
+  <!-- Background -->
+  <div class="bg">
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <div class="bg__grain"></div>
+  </div>
 
-<header class="pageHero" id="top">
-  <nav class="nav">
-    <a class="nav__brand" href="index.html">NF</a>
-    <div class="nav__links">
-      <a class="is-active" href="games.html">Games</a>
-      <a href="automation.html">Automation</a>
-      <a href="index.html#contact">Contact</a>
+  <header class="pageHero" id="top">
+    <nav class="nav">
+      <a class="nav__brand" href="index.html">NF</a>
+      <div class="nav__links">
+        <a class="is-active" href="games.html">Games</a>
+        <a href="automation.html">Automation</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="container pageHero__content">
+      <h1 class="pageHero__title">Game Dev Projects</h1>
+      <p class="pageHero__subtitle">
+        Unity gameplay systems, prototypes, tools, and experiments.
+      </p>
+      <a class="btn btn--ghost" href="index.html">← Back to Home</a>
     </div>
-  </nav>
+  </header>
 
-  <div class="container pageHero__content">
-    <h1 class="pageHero__title">Game Dev Projects</h1>
-    <p class="pageHero__subtitle">
-      Unity gameplay systems, prototypes, tools, and experiments.
-    </p>
-    <a class="btn btn--ghost" href="index.html">← Back to Home</a>
-  </div>
-</header>
+  <main class="section">
+    <div class="container">
 
-<main class="section">
-  <div class="container">
-
-    <!-- ========================= -->
-    <!-- PROJECT 1 -->
-    <!-- ========================= -->
-    <section class="detail" id="project-name">
-      <div class="detail__head">
-        <h2 class="detail__title">Project Name</h2>
-        <div class="detail__tags">
-          <span class="tag">Unity</span>
-          <span class="tag tag--muted">Gameplay</span>
-        </div>
-      </div>
-
-      <div class="detail__grid">
-        <div class="detail__panel">
-          <h4>Overview</h4>
-          <p>
-            Explain what the game is, your role, and what makes it interesting.
-            Focus on gameplay mechanics and systems.
-          </p>
-
-          <h4>What I Built</h4>
-          <ul>
-            <li>Player controller</li>
-            <li>Combat / interaction systems</li>
-            <li>UI + camera logic</li>
-          </ul>
-        </div>
-
-        <div class="detail__panel">
-          <h4>Tech Stack</h4>
-          <ul>
-            <li>Unity</li>
-            <li>C#</li>
-            <li>Custom editor tools</li>
-          </ul>
-
-          <div class="detail__actions">
-            <a class="btn btn--primary" href="#" target="_blank">Play</a>
-            <a class="btn btn--ghost" href="#" target="_blank">Code</a>
+      <!-- ========================= -->
+      <!-- PROJECT 1 -->
+      <!-- ========================= -->
+      <section class="detail" id="project-name">
+        <div class="detail__head">
+          <h2 class="detail__title">Project Name</h2>
+          <div class="detail__tags">
+            <span class="tag">Unity</span>
+            <span class="tag tag--muted">Gameplay</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ========================= -->
-    <!-- JAM GAME -->
-    <!-- ========================= -->
-    <section class="detail" id="jam-game">
-      <div class="detail__head">
-        <h2 class="detail__title">Jam Game</h2>
-        <div class="detail__tags">
-          <span class="tag">Game Jam</span>
-          <span class="tag tag--muted">2D</span>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Overview</h4>
+            <p>
+              Explain what the game is, your role, and what makes it interesting.
+              Focus on gameplay mechanics and systems.
+            </p>
+
+            <h4>What I Built</h4>
+            <ul>
+              <li>Player controller</li>
+              <li>Combat / interaction systems</li>
+              <li>UI + camera logic</li>
+            </ul>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Tech Stack</h4>
+            <ul>
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Custom editor tools</li>
+            </ul>
+
+            <div class="detail__actions">
+              <a class="btn btn--primary" href="#" target="_blank">Play</a>
+              <a class="btn btn--ghost" href="#" target="_blank">Code</a>
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
+
+            <div class="mediaCarousel" data-carousel>
+              <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">‹</button>
+              <div class="mediaViewport" tabindex="0" aria-label="Project media carousel">
+                <div class="mediaTrack" data-track>
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-1.jpg" alt="Gameplay screenshot 1" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-2.jpg" alt="Gameplay screenshot 2" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <video muted loop playsinline controls>
+                      <source src="./assets/demo-clip.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">›</button>
+            </div>
+
+          </div>
+
         </div>
-      </div>
+      </section>
 
-      <div class="detail__grid">
-        <div class="detail__panel">
-          <h4>Overview</h4>
-          <p>
-            Built during a game jam. Describe the core mechanic and what you
-            personally contributed.
-          </p>
-
-          <h4>Responsibilities</h4>
-          <ul>
-            <li>Movement + physics</li>
-            <li>Level scripting</li>
-            <li>Polish + UI</li>
-          </ul>
-        </div>
-
-        <div class="detail__panel">
-          <h4>Links</h4>
-          <div class="detail__actions">
-            <a class="btn btn--primary" href="#" target="_blank">Play</a>
-            <a class="btn btn--ghost" href="#" target="_blank">Itch.io</a>
+      <!-- ========================= -->
+      <!-- JAM GAME -->
+      <!-- ========================= -->
+      <section class="detail" id="jam-game">
+        <div class="detail__head">
+          <h2 class="detail__title">Jam Game</h2>
+          <div class="detail__tags">
+            <span class="tag">Game Jam</span>
+            <span class="tag tag--muted">2D</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ========================= -->
-    <!-- UNITY TOOLING -->
-    <!-- ========================= -->
-    <section class="detail" id="unity-tooling">
-      <div class="detail__head">
-        <h2 class="detail__title">Unity Tooling</h2>
-        <div class="detail__tags">
-          <span class="tag">Tools</span>
-          <span class="tag tag--muted">Editor</span>
-        </div>
-      </div>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Overview</h4>
+            <p>
+              Built during a game jam. Describe the core mechanic and what you
+              personally contributed.
+            </p>
 
-      <div class="detail__grid">
-        <div class="detail__panel">
-          <h4>Overview</h4>
-          <p>
-            Custom editor scripts, debugging utilities, or workflow tools that
-            improved iteration speed.
-          </p>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Movement + physics</li>
+              <li>Level scripting</li>
+              <li>Polish + UI</li>
+            </ul>
+          </div>
 
-          <h4>Highlights</h4>
-          <ul>
-            <li>Inspector extensions</li>
-            <li>Debug overlays</li>
-            <li>Automation tools</li>
-          </ul>
-        </div>
+          <div class="detail__panel">
+            <h4>Links</h4>
+            <div class="detail__actions">
+              <a class="btn btn--primary" href="#" target="_blank">Play</a>
+              <a class="btn btn--ghost" href="#" target="_blank">Itch.io</a>
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
 
-        <div class="detail__panel">
-          <h4>Links</h4>
-          <div class="detail__actions">
-            <a class="btn btn--ghost" href="#" target="_blank">Demo</a>
-            <a class="btn btn--ghost" href="#" target="_blank">Code</a>
+            <div class="mediaCarousel" data-carousel>
+              <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">‹</button>
+              <div class="mediaViewport" tabindex="0" aria-label="Project media carousel">
+                <div class="mediaTrack" data-track>
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-1.jpg" alt="Gameplay screenshot 1" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-2.jpg" alt="Gameplay screenshot 2" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <video muted loop playsinline controls>
+                      <source src="./assets/demo-clip.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">›</button>
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Nick Fisher</p>
-    </footer>
+      <!-- ========================= -->
+      <!-- UNITY TOOLING -->
+      <!-- ========================= -->
+      <section class="detail" id="unity-tooling">
+        <div class="detail__head">
+          <h2 class="detail__title">Unity Tooling</h2>
+          <div class="detail__tags">
+            <span class="tag">Tools</span>
+            <span class="tag tag--muted">Editor</span>
+          </div>
+        </div>
 
-  </div>
-</main>
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Overview</h4>
+            <p>
+              Custom editor scripts, debugging utilities, or workflow tools that
+              improved iteration speed.
+            </p>
 
-<script src="script.js"></script>
+            <h4>Highlights</h4>
+            <ul>
+              <li>Inspector extensions</li>
+              <li>Debug overlays</li>
+              <li>Automation tools</li>
+            </ul>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Links</h4>
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#" target="_blank">Demo</a>
+              <a class="btn btn--ghost" href="#" target="_blank">Code</a>
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
+
+            <div class="mediaCarousel" data-carousel>
+              <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">‹</button>
+              <div class="mediaViewport" tabindex="0" aria-label="Project media carousel">
+                <div class="mediaTrack" data-track>
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-1.jpg" alt="Gameplay screenshot 1" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <img src="./assets/placeholder-2.jpg" alt="Gameplay screenshot 2" />
+                  </div>
+
+                  <div class="mediaSlide">
+                    <video muted loop playsinline controls>
+                      <source src="./assets/demo-clip.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">›</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Nick Fisher</p>
+        <a class="btn btn--ghost" href="#top">Back to top</a>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
+
 </html>
