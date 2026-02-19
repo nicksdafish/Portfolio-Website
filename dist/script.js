@@ -37,8 +37,8 @@ document.querySelectorAll(".card[data-href]").forEach((card) => {
 // Subtle 3D tilt + dynamic shadow
 // ===============================
 (() => {
-  const MAX_TILT_DEG = 30;
-  const SHADOW_MOVE = 14; // how far shadow moves
+  const MAX_TILT_DEG = 5;
+  const SHADOW_MOVE = 10; // how far shadow moves
 
   const cards = document.querySelectorAll(".card--tilt");
 
