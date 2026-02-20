@@ -999,3 +999,11 @@ img {
     140ms,   /* border-color */
     140ms;   /* box-shadow */
 }
+
+
+/* =====================================
+   Spacer
+===================================== */
+.spacer-sm { height: 40px; }
+.spacer-md { height: 80px; }
+.spacer-lg { height: 140px; }

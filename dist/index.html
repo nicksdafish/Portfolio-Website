@@ -91,6 +91,9 @@
       </div>
     </main>
 
+    <div class="spacer-md"></div>
+    <div class="spacer-md"></div>
+
     <div class="scrollhint">
       <span class="scrollhint__text">Scroll for projects</span>
       <span class="scrollhint__mouse"></span>
@@ -98,154 +101,157 @@
   </header>
 
 
- <!-- PROJECTS -->
-<section class="section" id="projects">
-  <div class="container">
-    <header class="section__header">
-      <h2 class="section__title">Projects</h2>
-      <p class="section__subtitle">
-        A mix of game development and real-world automation systems.
-      </p>
-    </header>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">
+          A mix of game development and real-world automation systems.
+        </p>
+      </header>
 
-    <!-- GAME DEV PROJECTS (REVOLVING CAROUSEL) -->
-    <div class="section__block" id="games">
-      <div class="section__blockHeader">
-        <h3>Game Dev Projects</h3>
-        <p>Unity prototypes, gameplay systems, tools, and jams.</p>
-      </div>
-
-      <div class="revolveCarousel" data-revolve-carousel>
-        <button class="revolveNav revolveNav--left" type="button" data-prev aria-label="Previous game project">‹</button>
-
-        <div class="revolveStage" tabindex="0" aria-label="Game projects carousel">
-          <div class="revolveTrack" data-track>
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="games.html#project-name" aria-label="Project Name — view details">
-              <div class="card__top">
-                <div class="tag">Unity</div>
-                <div class="tag tag--muted">Gameplay</div>
-              </div>
-              <h4 class="card__title">Project Name</h4>
-              <p class="card__desc">
-                1–2 sentence description of what the game is and what you built.
-                Mention a standout system (combat, AI, dialogue, etc.).
-              </p>
-            </article>
-
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="games.html#jam-game" aria-label="Jam Game — view details">
-              <div class="card__top">
-                <div class="tag">Game Jam</div>
-                <div class="tag tag--muted">2D</div>
-              </div>
-              <h4 class="card__title">Jam Game</h4>
-              <p class="card__desc">
-                Short description. Call out your contribution (player controller,
-                UI, level scripting, polish, etc.).
-              </p>
-            </article>
-
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="games.html#unity-tooling" aria-label="Unity Tooling — view details">
-              <div class="card__top">
-                <div class="tag">Tools</div>
-                <div class="tag tag--muted">Editor</div>
-              </div>
-              <h4 class="card__title">Unity Tooling</h4>
-              <p class="card__desc">
-                Example: custom editor tools, content pipeline helpers, or debug UI
-                that sped up iteration.
-              </p>
-            </article>
-          </div>
+      <!-- GAME DEV PROJECTS (REVOLVING CAROUSEL) -->
+      <div class="section__block" id="games">
+        <div class="section__blockHeader">
+          <h3>Game Dev Projects</h3>
+          <p>Unity prototypes, gameplay systems, tools, and jams.</p>
         </div>
 
-        <button class="revolveNav revolveNav--right" type="button" data-next aria-label="Next game project">›</button>
-      </div>
-    </div>
+        <div class="revolveCarousel" data-revolve-carousel>
+          <button class="revolveNav revolveNav--left" type="button" data-prev
+            aria-label="Previous game project">‹</button>
 
-    <!-- AUTOMATION PROJECTS (REVOLVING CAROUSEL) -->
-    <div class="section__block" id="automation">
-      <div class="section__blockHeader">
-        <h3>Automation Projects</h3>
-        <p>Robotics, PLC systems, sensors, and production improvements.</p>
-      </div>
+          <div class="revolveStage" tabindex="0" aria-label="Game projects carousel">
+            <div class="revolveTrack" data-track>
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="games.html#project-name" aria-label="Project Name — view details">
+                <div class="card__top">
+                  <div class="tag">Unity</div>
+                  <div class="tag tag--muted">Gameplay</div>
+                </div>
+                <h4 class="card__title">Project Name</h4>
+                <p class="card__desc">
+                  1–2 sentence description of what the game is and what you built.
+                  Mention a standout system (combat, AI, dialogue, etc.).
+                </p>
+              </article>
 
-      <div class="revolveCarousel" data-revolve-carousel>
-        <button class="revolveNav revolveNav--left" type="button" data-prev aria-label="Previous automation project">‹</button>
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="games.html#jam-game" aria-label="Jam Game — view details">
+                <div class="card__top">
+                  <div class="tag">Game Jam</div>
+                  <div class="tag tag--muted">2D</div>
+                </div>
+                <h4 class="card__title">Jam Game</h4>
+                <p class="card__desc">
+                  Short description. Call out your contribution (player controller,
+                  UI, level scripting, polish, etc.).
+                </p>
+              </article>
 
-        <div class="revolveStage" tabindex="0" aria-label="Automation projects carousel">
-          <div class="revolveTrack" data-track>
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="automation.html#laser-cell" aria-label="Automated Cell Upgrade — view details">
-              <div class="card__top">
-                <div class="tag">Robotics</div>
-                <div class="tag tag--muted">Integration</div>
-              </div>
-              <h4 class="card__title">Automated Cell Upgrade</h4>
-              <p class="card__desc">
-                Briefly explain the problem, what you built, and the impact (cycle time,
-                quality, uptime, cost savings).
-              </p>
-            </article>
-
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="automation.html#sensor-upgrade" aria-label="Controls + Sensors System — view details">
-              <div class="card__top">
-                <div class="tag">PLC</div>
-                <div class="tag tag--muted">Controls</div>
-              </div>
-              <h4 class="card__title">Controls + Sensors System</h4>
-              <p class="card__desc">
-                Example: new safety logic, HMI screens, diagnostics, and a clean
-                commissioning story.
-              </p>
-            </article>
-
-            <article class="revolveItem card card--clickable" role="link" tabindex="-1"
-              data-href="automation.html#plc-overhaul" aria-label="Process Improvement — view details">
-              <div class="card__top">
-                <div class="tag">Cost Savings</div>
-                <div class="tag tag--muted">Process</div>
-              </div>
-              <h4 class="card__title">Process Improvement</h4>
-              <p class="card__desc">
-                Example: eliminated manual steps, improved repeatability, reduced scrap,
-                or sped up throughput.
-              </p>
-            </article>
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="games.html#unity-tooling" aria-label="Unity Tooling — view details">
+                <div class="card__top">
+                  <div class="tag">Tools</div>
+                  <div class="tag tag--muted">Editor</div>
+                </div>
+                <h4 class="card__title">Unity Tooling</h4>
+                <p class="card__desc">
+                  Example: custom editor tools, content pipeline helpers, or debug UI
+                  that sped up iteration.
+                </p>
+              </article>
+            </div>
           </div>
+
+          <button class="revolveNav revolveNav--right" type="button" data-next aria-label="Next game project">›</button>
+        </div>
+      </div>
+
+      <!-- AUTOMATION PROJECTS (REVOLVING CAROUSEL) -->
+      <div class="section__block" id="automation">
+        <div class="section__blockHeader">
+          <h3>Automation Projects</h3>
+          <p>Robotics, PLC systems, sensors, and production improvements.</p>
         </div>
 
-        <button class="revolveNav revolveNav--right" type="button" data-next aria-label="Next automation project">›</button>
+        <div class="revolveCarousel" data-revolve-carousel>
+          <button class="revolveNav revolveNav--left" type="button" data-prev
+            aria-label="Previous automation project">‹</button>
+
+          <div class="revolveStage" tabindex="0" aria-label="Automation projects carousel">
+            <div class="revolveTrack" data-track>
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="automation.html#laser-cell" aria-label="Automated Cell Upgrade — view details">
+                <div class="card__top">
+                  <div class="tag">Robotics</div>
+                  <div class="tag tag--muted">Integration</div>
+                </div>
+                <h4 class="card__title">Automated Cell Upgrade</h4>
+                <p class="card__desc">
+                  Briefly explain the problem, what you built, and the impact (cycle time,
+                  quality, uptime, cost savings).
+                </p>
+              </article>
+
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="automation.html#sensor-upgrade" aria-label="Controls + Sensors System — view details">
+                <div class="card__top">
+                  <div class="tag">PLC</div>
+                  <div class="tag tag--muted">Controls</div>
+                </div>
+                <h4 class="card__title">Controls + Sensors System</h4>
+                <p class="card__desc">
+                  Example: new safety logic, HMI screens, diagnostics, and a clean
+                  commissioning story.
+                </p>
+              </article>
+
+              <article class="revolveItem card card--clickable" role="link" tabindex="-1"
+                data-href="automation.html#plc-overhaul" aria-label="Process Improvement — view details">
+                <div class="card__top">
+                  <div class="tag">Cost Savings</div>
+                  <div class="tag tag--muted">Process</div>
+                </div>
+                <h4 class="card__title">Process Improvement</h4>
+                <p class="card__desc">
+                  Example: eliminated manual steps, improved repeatability, reduced scrap,
+                  or sped up throughput.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <button class="revolveNav revolveNav--right" type="button" data-next
+            aria-label="Next automation project">›</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <div class="section__block" id="contact">
+    <div class="contact">
+      <h3>Contact</h3>
+      <p>If you want to chat about a role or a project, reach out.</p>
+
+      <div class="contact__links">
+        <a class="btn btn--ghost" href="mailto:nick.fisher118@gmail.com">Email</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Itch.io</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </div>
-
   </div>
-</section>
 
-
-      <!-- CONTACT -->
-      <div class="section__block" id="contact">
-        <div class="contact">
-          <h3>Contact</h3>
-          <p>If you want to chat about a role or a project, reach out.</p>
-
-          <div class="contact__links">
-            <a class="btn btn--ghost" href="mailto:nick.fisher118@gmail.com">Email</a>
-            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Itch.io</a>
-            <a class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <p>© <span id="year"></span> Nick Fisher</p>
-        <a class="btn btn--ghost" href="#top">Back to top</a>
-      </footer>
-    </div>
+  <footer class="footer">
+    <p>© <span id="year"></span> Nick Fisher</p>
+    <a class="btn btn--ghost" href="#top">Back to top</a>
+  </footer>
+  </div>
   </section>
 
 
