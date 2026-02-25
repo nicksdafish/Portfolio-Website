@@ -1010,16 +1010,3 @@ img {
 
 
 
-.gameEmbed {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.gameEmbed iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
