@@ -197,3 +197,34 @@ document.querySelectorAll(".card[data-href]").forEach((card) => {
 })();
 
 
+// Force the carousel to go to the final item when play button is presseed
+
+
+document.addEventListener("click", (e) => {
+  const playBtn = e.target.closest("[data-play]");
+  if (!playBtn) return;
+
+  e.preventDefault();
+
+  // Each project is a <section class="detail"> in your HTML
+  const section = playBtn.closest("section.detail");
+  if (!section) return;
+
+  const carousel = section.querySelector("[data-carousel]");
+  if (!carousel) return;
+
+  const track = carousel.querySelector("[data-track]");
+  const nextBtn = carousel.querySelector("[data-next]");
+  if (!track || !nextBtn) return;
+
+  const slides = track.querySelectorAll(".mediaSlide");
+  if (slides.length === 0) return;
+
+  // Click "next" enough times to land on the last slide
+  const clicksNeeded = slides.length - 1;
+  for (let i = 0; i < clicksNeeded; i++) nextBtn.click();
+
+  // Optional: focus the carousel so keyboard arrows work right away
+  const viewport = carousel.querySelector(".mediaViewport");
+  if (viewport) viewport.focus();
+});
