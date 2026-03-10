@@ -32,7 +32,7 @@
       <p class="pageHero__subtitle">
         Click a project to jump to full details.
       </p>
-            <a class="btn btn--ghost" href="index.html">← Back to Home</a>
+      <a class="btn btn--ghost" href="index.html">← Back to Home</a>
     </div>
   </header>
 
@@ -49,90 +49,217 @@
       </div>
 
       <!-- PROJECT 1 -->
-<section class="detail" id="laser-cell">
+      <section class="detail" id="laser-cell">
+        <div class="detail__head">
+          <h2 class="detail__title">Manual Laser Cell Build</h2>
+          <div class="detail__tags">
+            <span class="tag">Industrial Automation</span>
+            <span class="tag tag--muted">Laser Integration</span>
+            <span class="tag tag--muted">Design + Build</span>
+            <span class="tag tag--muted">Cost Savings</span>
+          </div>
+        </div>
+
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>What it is</h4>
+            <p>
+              A custom-built manual laser workcell designed to make laser processing safer, more repeatable, and easier
+              for
+              operators. I designed the full system end-to-end: enclosure + fixtures, electrical cabinet layout, safety
+              chain,
+              controls logic, and the full bill of materials/spec package—then built and commissioned it on-site.
+            </p>
+
+            <h4>My role</h4>
+            <ul>
+              <li>Owned requirements → concept → detailed design → build → commissioning</li>
+              <li>Full 3D CAD: enclosure, fixtures/tooling, component layout, serviceability/maintenance access</li>
+              <li>Electrical design: panel layout, wiring scheme, I/O mapping, power distribution, labeling standards
+              </li>
+              <li>Controls programming: PLC logic, safety interlocks, sensors, operator sequence, fault handling</li>
+              <li>Spec + quoting: vendor RFQs, part selection, cost comparisons, lead-time planning, documentation</li>
+              <li>Troubleshooting + iteration after install to improve reliability and operator flow</li>
+            </ul>
+
+            <h4>Impact</h4>
+            <ul>
+              <li>Standardized the process (repeatable setup + consistent results)</li>
+              <li>Reduced operator errors with interlocks, guided sequence, and clear fault states</li>
+              <li>Designed to hit performance goals without paying integrator pricing (major cost avoidance)</li>
+              <li>Built with maintainability in mind: labeled wiring, clean panel layout, service access</li>
+            </ul>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Tech / Components</h4>
+            <ul>
+              <li>Laser system: Keyence (MD-X series) + integrated sensing for part presence/position verification</li>
+              <li>Controls: PLC-based control with discrete I/O, clear state machine sequence, and robust alarms</li>
+              <li>Sensors: photoelectric / laser sensors (e.g., Keyence LR-TB class) for detection + process checks</li>
+              <li>Safety: E-stops, door interlocks, safety relay chain, guarded access to laser area</li>
+              <li>Electrical: 24VDC control, fused power distribution, clean wire management + labeling</li>
+              <li>Mechanical: custom fixtures/tooling modeled for fast changeover + consistent locating</li>
+            </ul>
+
+            <h4>Media</h4>
+            <div class="mediaRow">
+              <!-- Carousel A -->
+              <div class="mediaCarousel" data-carousel>
+                <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">
+                  ‹
+                </button>
+
+                <div class="mediaViewport" tabindex="0" aria-label="Media carousel">
+                  <div class="mediaTrack" data-track>
+                    <!-- Slide 1 (image) -->
+                    <div class="mediaSlide">
+                      <img src="./assets/ManualLaserCellFront.jpg"
+                        alt="Manual laser cell enclosure and operator area" />
+                    </div>
+
+                    <!-- Slide 2 (image) -->
+                    <div class="mediaSlide">
+                      <img src="./assets/ManualLaserCellBack.jpg"
+                        alt="Electrical cabinet / panel layout for the laser cell" />
+                    </div>
+
+                    <!-- Slide 3 (video) -->
+                    <div class="mediaSlide">
+                      <video muted loop playsinline controls>
+                        <source src="./assets/ManualLaserCell.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">
+                  ›
+                </button>
+              </div>
+            </div>
+
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECT 2 -->
+      <section class="detail" id="sensor-upgrade">
+        <div class="detail__head">
+          <h2 class="detail__title">Robotic Pick System Upgrades</h2>
+          <div class="detail__tags">
+            <span class="tag">Industrial Automation</span>
+            <span class="tag tag--muted">Robotics</span>
+            <span class="tag tag--muted">Sensors</span>
+          </div>
+        </div>
+
+        <div class="detail__grid">
+          <div class="detail__panel">
+            <h4>Problem</h4>
+            <p>
+              The robotic pick system relied on compressed air to separate stacked
+              raw material before the robot attempted a pick. The original air tool
+              was inefficient and frequently failed to separate parts properly,
+              leading to double picks, robot crashes, and increased scrap.
+              Additionally, the robot’s gripper used a mechanical limit switch that
+              required physical contact with the part, leaving visible marks on the
+              product and reducing the effectiveness of the separation airflow.
+            </p>
+
+            <h4>Solution</h4>
+            <p>
+              I redesigned two key components of the system. First, I replaced the
+              original air separation tool with an industrial air knife, allowing a
+              higher volume airflow while using less compressed air. This dramatically
+              improved part separation before the robot attempted a pick.
+            </p>
+
+            <p>
+              I also replaced the mechanical limit switch on the robot gripper with a
+              distance-based photoelectric sensor. This removed the need for physical
+              contact with the part while providing much more reliable pick detection.
+            </p>
+
+            <h4>Result</h4>
+            <ul>
+              <li>Significantly reduced robot pick faults and crashes</li>
+              <li>Lower scrap rate from improved pick reliability</li>
+              <li>Improved part quality by eliminating scratches caused by the limit switch</li>
+              <li>More consistent single-part picking due to improved air separation</li>
+              <li>Enabled extended lights-out production with no operators present due to increased system reliability
+              </li>
+              <li>Substantially increased overall production throughput</li>
+            </ul>
+          </div>
+
+          <div class="detail__panel">
+            <h4>Implementation Notes</h4>
+            <ul>
+              <li>Installed and tuned industrial air knife for improved part separation</li>
+              <li>Integrated distance photoelectric sensor into robot gripper tooling</li>
+              <li>Updated robot logic to use non-contact pick confirmation</li>
+              <li>Optimized airflow to increase separation efficiency while reducing air consumption</li>
+            </ul>
+
+            <div class="detail__actions">
+              <a class="btn btn--ghost" href="#top">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- PROJECT 3 -->
+<section class="detail" id="laser-cell-integration">
   <div class="detail__head">
-    <h2 class="detail__title">Manual Laser Cell Build</h2>
+    <h2 class="detail__title">Robotic Laser Marking Cell Integration</h2>
     <div class="detail__tags">
-      <span class="tag">Industrial Automation</span>
-      <span class="tag tag--muted">Laser Integration</span>
-      <span class="tag tag--muted">Design + Build</span>
-      <span class="tag tag--muted">Cost Savings</span>
+      <span class="tag">Robotics</span>
+      <span class="tag tag--muted">Laser Systems</span>
+      <span class="tag tag--muted">PLC Integration</span>
     </div>
   </div>
 
   <div class="detail__grid">
     <div class="detail__panel">
-      <h4>What it is</h4>
+      <h4>Project Overview</h4>
       <p>
-        A custom-built manual laser workcell designed to make laser processing safer, more repeatable, and easier for
-        operators. I designed the full system end-to-end: enclosure + fixtures, electrical cabinet layout, safety chain,
-        controls logic, and the full bill of materials/spec package—then built and commissioned it on-site.
+        Designed and integrated a fully automated robotic laser marking cell to
+        engrave product information onto manufactured parts. The system was
+        built to replace manual marking processes while improving consistency,
+        traceability, and production throughput.
       </p>
 
-      <h4>My role</h4>
-      <ul>
-        <li>Owned requirements → concept → detailed design → build → commissioning</li>
-        <li>Full 3D CAD: enclosure, fixtures/tooling, component layout, serviceability/maintenance access</li>
-        <li>Electrical design: panel layout, wiring scheme, I/O mapping, power distribution, labeling standards</li>
-        <li>Controls programming: PLC logic, safety interlocks, sensors, operator sequence, fault handling</li>
-        <li>Spec + quoting: vendor RFQs, part selection, cost comparisons, lead-time planning, documentation</li>
-        <li>Troubleshooting + iteration after install to improve reliability and operator flow</li>
-      </ul>
+      <h4>System Design</h4>
+      <p>
+        I managed the full lifecycle of the automation system including
+        mechanical layout, controls integration, sensor selection, and system
+        programming. The project combined a robotic handling system with an
+        industrial laser marking unit, conveyor transport, and custom safety
+        enclosure.
+      </p>
 
       <h4>Impact</h4>
       <ul>
-        <li>Standardized the process (repeatable setup + consistent results)</li>
-        <li>Reduced operator errors with interlocks, guided sequence, and clear fault states</li>
-        <li>Designed to hit performance goals without paying integrator pricing (major cost avoidance)</li>
-        <li>Built with maintainability in mind: labeled wiring, clean panel layout, service access</li>
+        <li>Automated previously manual marking operations</li>
+        <li>Improved marking consistency and traceability</li>
+        <li>Reduced operator involvement in the marking process</li>
+        <li>Created a scalable cell design for future automation expansion</li>
       </ul>
     </div>
 
     <div class="detail__panel">
-      <h4>Tech / Components</h4>
+      <h4>Technical Highlights</h4>
       <ul>
-        <li>Laser system: Keyence (MD-X series) + integrated sensing for part presence/position verification</li>
-        <li>Controls: PLC-based control with discrete I/O, clear state machine sequence, and robust alarms</li>
-        <li>Sensors: photoelectric / laser sensors (e.g., Keyence LR-TB class) for detection + process checks</li>
-        <li>Safety: E-stops, door interlocks, safety relay chain, guarded access to laser area</li>
-        <li>Electrical: 24VDC control, fused power distribution, clean wire management + labeling</li>
-        <li>Mechanical: custom fixtures/tooling modeled for fast changeover + consistent locating</li>
+        <li>Integrated industrial robot with laser marking system</li>
+        <li>Designed PLC control logic for coordinated motion and marking cycles</li>
+        <li>Implemented sensors for part detection and position verification</li>
+        <li>Developed safe robot and laser interaction sequences</li>
+        <li>Created electrical layout and control cabinet architecture</li>
+        <li>Commissioned and validated the full automation cell</li>
       </ul>
-
-      <h4>Media</h4>
-      <div class="mediaRow">
-        <!-- Carousel A -->
-        <div class="mediaCarousel" data-carousel>
-          <button class="mediaNav mediaNav--left" type="button" data-prev aria-label="Previous media">
-            ‹
-          </button>
-
-          <div class="mediaViewport" tabindex="0" aria-label="Media carousel">
-            <div class="mediaTrack" data-track>
-              <!-- Slide 1 (image) -->
-              <div class="mediaSlide">
-                <img src="./assets/ManualLaserCellFront.jpg" alt="Manual laser cell enclosure and operator area" />
-              </div>
-
-              <!-- Slide 2 (image) -->
-              <div class="mediaSlide">
-                <img src="./assets/ManualLaserCellBack.jpg" alt="Electrical cabinet / panel layout for the laser cell" />
-              </div>
-
-              <!-- Slide 3 (video) -->
-              <div class="mediaSlide">
-                <video muted loop playsinline controls>
-                  <source src="./assets/ManualLaserCell.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div>
-
-          <button class="mediaNav mediaNav--right" type="button" data-next aria-label="Next media">
-            ›
-          </button>
-        </div>
-      </div>
 
       <div class="detail__actions">
         <a class="btn btn--ghost" href="#top">Back to top</a>
@@ -140,79 +267,6 @@
     </div>
   </div>
 </section>
-      <!-- PROJECT 2 -->
-      <section class="detail" id="sensor-upgrade">
-        <div class="detail__head">
-          <h2 class="detail__title">Sensor + Vision Upgrade</h2>
-          <div class="detail__tags">
-            <span class="tag">Sensors</span>
-            <span class="tag tag--muted">Controls</span>
-          </div>
-        </div>
-
-        <div class="detail__grid">
-          <div class="detail__panel">
-            <h4>Problem</h4>
-            <p>What was failing / slow / inconsistent?</p>
-
-            <h4>Solution</h4>
-            <p>What you added or changed, and why.</p>
-
-            <h4>Result</h4>
-            <ul>
-              <li>Scrap reduced by X%</li>
-              <li>Uptime improved</li>
-            </ul>
-          </div>
-
-          <div class="detail__panel">
-            <h4>Implementation notes</h4>
-            <ul>
-              <li>Wiring + I/O mapping</li>
-              <li>Calibration / alignment</li>
-              <li>Diagnostics in HMI</li>
-            </ul>
-
-            <div class="detail__actions">
-              <a class="btn btn--ghost" href="#top">Back to top</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECT 3 -->
-      <section class="detail" id="plc-overhaul">
-        <div class="detail__head">
-          <h2 class="detail__title">PLC / HMI Overhaul</h2>
-          <div class="detail__tags">
-            <span class="tag">PLC</span>
-            <span class="tag tag--muted">HMI</span>
-            <span class="tag tag--muted">Safety</span>
-          </div>
-        </div>
-
-        <div class="detail__grid">
-          <div class="detail__panel">
-            <h4>Before</h4>
-            <p>Old logic issues, lack of diagnostics, etc.</p>
-
-            <h4>After</h4>
-            <p>New structure, alarms, state machine, better recoverability.</p>
-          </div>
-
-          <div class="detail__panel">
-            <h4>Highlights</h4>
-            <ul>
-              <li>State-machine style sequencing</li>
-              <li>Alarm history / fault isolation</li>
-              <li>Safer recovery routines</li>
-            </ul>
-            <div class="detail__actions">
-              <a class="btn btn--ghost" href="#top">Back to top</a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <footer class="footer">
         <p>© <span id="year"></span> Nick Fisher</p>
